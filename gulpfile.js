@@ -16,10 +16,10 @@ const paths = {
         src: 'src/styles/**/*.scss',
         dest: 'dist/css'
     },
-    scripts: {
-        src: 'src/js/**/*.js',
-        dest: 'dist/js'
-    },
+    // scripts: {
+    //     src: 'src/js/**/*.js',
+    //     dest: 'dist/js'
+    // },
     image: {
         src: 'src/image/**/*.*',
         dest: 'dist/image'
@@ -57,13 +57,13 @@ function buildCSS() {
         .pipe(browserSync.stream())
 };
 
-function buildScripts() {
-    return gulp.src(paths.scripts.src)
-        .pipe(concat('mine.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(paths.scripts.dest))
-        .pipe(browserSync.stream())
-}
+// function buildScripts() {
+//     return gulp.src(paths.scripts.src)
+//         .pipe(concat('mine.min.js'))
+//         .pipe(uglify())
+//         .pipe(gulp.dest(paths.scripts.dest))
+//         .pipe(browserSync.stream())
+// }
 
 function buildImages(){
     return gulp.src(paths.image.src)
@@ -81,7 +81,7 @@ function buildHTML() {
 
 function watch() {
     gulp.watch(paths.styles.src, buildCSS);
-    gulp.watch(paths.scripts.src, buildScripts);
+    // gulp.watch(paths.scripts.src, buildScripts);
     gulp.watch(paths.image.src, buildImages);
     gulp.watch(paths.html.src, buildHTML);
     gulp.watch('./src/*.html', gulp.series(browserReload));
@@ -91,7 +91,8 @@ function clear() {
     return del(['dist'])
 }
 
-const build = gulp.series(clear, gulp.parallel(buildCSS, buildScripts, buildImages, buildHTML))
+// const build = gulp.series(clear, gulp.parallel(buildCSS, buildScripts, buildImages, buildHTML))
+const build = gulp.series(clear, gulp.parallel(buildCSS,buildImages, buildHTML))
 
 gulp.task('build', build);
 
