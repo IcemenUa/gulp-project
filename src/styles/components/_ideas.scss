@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+.ideas {
+    padding: 0% 22%;
+
+    h2 {
+        margin-top: 90px;
+
+        @include text(Montserrat, normal, bold, $sectionNameFontSizeDesk, 32px, center, #444444);
+    }
+
+    &_cards {
+        margin-top: 35px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &_card1 {
+            @include flex-center-center;
+            cursor: pointer;
+            width: 32%;
+            height: 310px;
+            background-image: url(../image/ideas1.jpg);
+            background-size: cover;
+            background-position-y: -25px;
+            border-radius: 4px;
+            transition: 0.5s;
+
+            h2 {
+                @include text(Montserrat, normal, bold, $ideasFontSize, 27px, center)
+            }
+
+            &:hover {
+                padding-bottom: 10%;
+                transition: 0.5s;
+
+            }
+        }
+
+        &_card2 {
+            @include flex-center-center;
+            cursor: pointer;
+            width: 32%;
+            height: 310px;
+            background-image: url(../image/Healath.png);
+            background-position-y: -40px;
+            background-size: cover;
+            border-radius: 4px;
+            transition: 0.5s;
+
+            h2 {
+                @include text(Montserrat, normal, bold, $ideasFontSize, 27px, center)
+            }
+
+            &:hover {
+                padding-bottom: 10%;
+                transition: 0.5s;
+
+            }
+        }
+
+        &_card3 {
+            @include flex-center-center;
+            cursor: pointer;
+            width: 32%;
+            height: 310px;
+            background-image: url(../image/Extreme.png);
+            background-size: cover;
+            border-radius: 4px;
+            transition: 0.5s;
+
+            h2 {
+                @include text(Montserrat, normal, bold, $ideasFontSize, 27px, center)
+            }
+
+            &:hover {
+                padding-bottom: 10%;
+                transition: 0.5s;
+
+            }
+        }
+
+        &_card4 {
+            @include flex-center-center;
+            cursor: pointer;
+            margin-top: 2%;
+            width: 32%;
+            height: 310px;
+            background-image: url(../image/Games.png);
+            background-size: cover;
+            border-radius: 4px;
+            transition: 0.5s;
+
+            h2 {
+                @include text(Montserrat, normal, bold, $ideasFontSize, 27px, center)
+            }
+
+            &:hover {
+                padding-bottom: 10%;
+                transition: 0.5s;
+
+            }
+        }
+
+        &_card5 {
+            @include flex-center-center;
+            cursor: pointer;
+            margin-top: 2%;
+            width: 66%;
+            height: 310px;
+            background-image: url(../image/Culture.png);
+            background-size: cover;
+            border-radius: 4px;
+            transition: 0.5s;
+
+            h2 {
+                @include text(Montserrat, normal, bold, $ideasFontSize, 27px, center)
+            }
+
+            &:hover {
+                padding-bottom: 10%;
+                transition: 0.5s;
+
+            }
+        }
+
+        &_card6 {
+            @include flex-center-center;
+            cursor: pointer;
+            margin-top: 2%;
+            width: 66%;
+            height: 310px;
+            background-image: url(../image/Relax.png);
+            background-size: cover;
+            border-radius: 4px;
+            transition: 0.5s;
+
+            h2 {
+                @include text(Montserrat, normal, bold, $ideasFontSize, 27px, center)
+            }
+
+            &:hover {
+                padding-bottom: 10%;
+                transition: 0.5s;
+
+            }
+        }
+
+        &_card7 {
+            @include flex-center-center;
+            cursor: pointer;
+            margin-top: 2%;
+            width: 32%;
+            height: 310px;
+            background-image: url(../image/Travelling.png);
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+            transition: 0.5s;
+
+            h2 {
+                @include text(Montserrat, normal, bold, $ideasFontSize, 27px, center)
+            }
+
+            &:hover {
+                padding-bottom: 10%;
+                transition: 0.5s;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 969px) {
+    .ideas {
+        padding: 0% 2%;
+
+        h2 {
+            margin-top: 50px;
+        }
+
+        &_cards {
+            margin-top: 35px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+    }
+};
+
+@media screen and (max-width: 767px){
+    .ideas {
+        padding: 0% 5%;
+    
+        h2 {
+            margin-top: 70px;
+        }
+        &_cards {
+            margin-top: 35px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            &_card1 {
+                cursor: pointer;
+                width: 98%;
+                height: 207px;
+                background-position-y: -25px;
+            }
+    
+            &_card2 {
+                margin-top:2%;
+                width: 98%;
+                height: 207px;
+                background-position-y: -80px;
+            }
+    
+            &_card3 {
+                margin-top:2%;
+                width: 98%;
+                height: 207px;
+            }
+    
+            &_card4 {
+                width: 98%;
+                height: 207px;
+            }
+    
+            &_card5 {
+                width: 98%;
+                height: 207px;
+            }
+    
+            &_card6 {
+                width: 98%;
+                height: 207px;
+            }
+    
+            &_card7 {
+                width: 98%;
+                height: 207px;
+            }
+        }
+    }
+
+
+
+
+}

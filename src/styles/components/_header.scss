@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    padding-top: 40px;
+    height: 700px;
+    width: 100%;
+    background-image: url(../image/header1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -150px;
+
+
+}
+
+.header_head {
+    width: 100%;
+    height: 36px;
+    padding: 0% 10%;
+    // background: #000;
+    @include flex-btwn-center;
+
+    &_logo {
+        h1 {
+            @include text(Montserrat, normal, bold, 20px, 24px);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        h1:hover {
+            @include text-gradient(linear-gradient(41deg, rgba(254, 29, 29, 1) 0%, rgba(146, 123, 160, 1) 17%, rgba(29, 252, 253, 1) 31%, rgba(32, 88, 251, 1) 49%, rgba(124, 33, 250, 1) 63%, rgba(72, 201, 102, 1) 79%, rgba(252, 176, 69, 1) 90%, rgba(252, 176, 69, 1) 98%));
+            transform: rotate(180deg) scale(1.5);
+            transition: 0.5s;
+            transition-delay: 0.2s
+        }
+    }
+
+    &_buttons {
+        height: 36px;
+        width: 153px;
+        @include flex-btwn-center;
+
+        a {
+            text-decoration: none;
+            @include button-fonts;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+
+        form {
+            button {
+                @include button(90px, 36px, 2px solid #ffffff, none);
+            }
+
+            button:hover {
+                background: rgba(162, 255, 224, 0.589);
+            }
+        }
+    }
+}
+
+.header_body_name {
+    margin: 150px auto 0px auto;
+    max-width: 470px;
+
+    h2 {
+        @include text(Montserrat, normal, bold, $mainNameFontSize, 63px);
+        margin-bottom: 28px;
+    }
+
+    p {
+        @include text(Roboto, normal, 300, $headerTextFontSize, 24px);
+        text-align: center;
+        margin-bottom: 33px;
+    }
+
+    form {
+        button {
+            @include button(225px, 40px, none, #ff4e50);
+            margin: auto;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #ff494c;
+            box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.53);
+        }
+    }
+}
+
+// tablet
+@media screen and (max-width: 969px) {
+    header {
+        background-position: -45px -15px;
+        padding-top: 30px;
+        height: 600px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+    header {
+        background-position: -175px -40px;
+        padding-top: 30px;
+        height: 500px;
+
+    }
+
+    .header_head {
+        width: 100%;
+        height: 36px;
+        padding: 0% 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        &_logo {
+            order: 2;
+        }
+
+        &_buttons {
+            order: 1;
+        }
+
+    }
+
+    .header_body_name {
+
+        h2 {
+            @include text(Montserrat, normal, bold, 30px, 37px);
+            margin-bottom: 28px;
+        }
+
+        p {
+            @include text(Roboto, normal, 300, $headerTextFontSize, 24px);
+            margin-bottom: 33px;
+        }
+    }
+}

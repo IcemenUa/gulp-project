@@ -1,0 +1,197 @@
+.meetpartner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0% 20%;
+
+    h2 {
+        @include text(Montserrat, normal, bold, $sectionNameFontSizeDesk, 32px, center, #444444);
+        margin-top: 90px;
+    }
+
+    &_cards {
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &_card1 {
+            @include flex-colum-center;
+            cursor: pointer;
+            padding: 1%;
+            transition: 0.3s;
+            border-radius: 40px;
+
+            &_pic {
+                background-image: url(../image/Avatar1.png);
+                height: 120px;
+                width: 120px;
+            }
+
+            &:hover {
+                background: rgba(211, 211, 211, 0.219);
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+        }
+
+        &_card2 {
+            @include flex-colum-center;
+            cursor: pointer;
+            padding: 1%;
+            transition: 0.3s;
+            border-radius: 40px;
+
+            &_pic {
+                background-image: url(../image/Avatar2.png);
+                height: 120px;
+                width: 120px;
+            }
+
+            &:hover {
+                background: rgba(211, 211, 211, 0.219);
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+        }
+
+        &_card3 {
+            @include flex-colum-center;
+            cursor: pointer;
+            padding: 1%;
+            transition: 0.3s;
+            border-radius: 40px;
+
+            &_pic {
+                background-image: url(../image/Avatar3.png);
+                height: 120px;
+                width: 120px;
+            }
+
+            &:hover {
+                background: rgba(211, 211, 211, 0.219);
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+        }
+
+        &_card4 {
+            @include flex-colum-center;
+            cursor: pointer;
+            padding: 1%;
+            transition: 0.3s;
+            border-radius: 40px;
+
+            &_pic {
+                background-image: url(../image/Avatar4.png);
+                height: 120px;
+                width: 120px;
+            }
+
+            &:hover {
+                background: rgba(211, 211, 211, 0.219);
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+        }
+    }
+
+    form {
+        margin-top: 36px;
+        margin-left: auto;
+        margin-right: auto;
+
+        button {
+            @include button(180px, 40px, 2px solid #FF4E50, none, #FF4E50);
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #ff494c;
+            box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.53);
+            color: white;
+            transition: 0.2s;
+        }
+    }
+}
+
+.meetpartner_cards_name {
+    @include text(Montserrat, normal, bold, $partnerNameFontSize, 17px, center, #444444);
+    margin-top: 35px;
+}
+
+.meetpartner_cards_text {
+    @include text(Roboto, normal, 300, $partnerAboutFontSize, 14px, center, #444444);
+    margin-top: 12px;
+    max-width: 221px;
+}
+
+
+@media screen and (max-width: 969px) {
+
+    .meetpartner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0% 18%;
+
+        h2 {
+            margin-top: 50px;
+        }
+
+        &_cards {
+            margin-top: 35px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+;
+
+@media screen and (max-width: 767px) {
+    .meetpartner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0% 5%;
+
+        h2 {
+            margin-top: 50px;
+        }
+
+        &_cards {
+            margin-top: 35px;
+            height: 900px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            &_card1 {
+                order: 1;
+            }
+
+            &_card2 {
+                order: 4;
+            }
+
+            &_card3 {
+                order: 2;
+            }
+
+            &_card4 {
+                order: 3;
+            }
+        }
+    }
+
+
+}

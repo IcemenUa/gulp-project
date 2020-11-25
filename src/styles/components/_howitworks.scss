@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.howitworks {
+    text-align: center;
+
+    //
+    h2 {
+        margin-top: 90px;
+        @include text(Montserrat, normal, bold, $sectionNameFontSizeDesk, 32px, center, #444444);
+    }
+
+    &_cards {
+        width: 100%;
+        margin: 35px auto 0 auto;
+        @include flex-btwn-center;
+        padding: 0% 20%;
+
+        &_card1 {
+            height: 400px;
+            width: 31%;
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            background-image: url(../image/Step1mage.png);
+            background-size: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+        }
+
+        &_card2 {
+            height: 400px;
+            width: 31%;
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            background-image: url(../image/Step2mage2.png);
+            background-size: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+        }
+
+        &_card3 {
+            height: 400px;
+            width: 31%;
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            background-image: url(../image/Step3mage1.png);
+            background-size: cover;
+            background-position-y: -40px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.card_step {
+    width: 70px;
+    height: 20px;
+    @include flex-center-center;
+    border-radius: 40px;
+    background-color: #ff4e50;
+    @include text(Montserrat, normal, normal, $cardFontStepSize, 12px, center, #ffffff);
+    letter-spacing: 2px;
+}
+
+.card_name {
+    width: 100%;
+    margin-top: 18px;
+    margin-right: auto;
+    margin-left: auto;
+    @include text(Montserrat, normal, bold, $cardFontNameSize, 26px, left, #ffffff);
+}
+
+.card_text {
+    width: 100%;
+    margin-top: 10px;
+    @include text(Roboto, normal, 300, $cardFontTextSizeDesk, 14px, left, #e3e3e3);
+}
+
+// tablet
+@media screen and (max-width: 969px) {
+    .howitworks {
+        h2 {
+            margin-top: 20px;
+        }
+
+        &_cards {
+            padding: 0% 2%;
+
+            &_card1 {
+                width: 32%;
+            }
+
+            &_card2 {
+                width: 32%;
+            }
+
+            &_card3 {
+                width: 32%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .howitworks {
+        h2 {
+            margin-top: 10px;
+        }
+
+        &_cards {
+            width: 100%;
+            margin: 35px auto 0 auto;
+            @include flex-btwn-colum-center;
+            padding: 0% 2%;
+
+            &_card1 {
+                margin-top:2%;
+                height: 240px;
+                width: 98%;
+                padding: 1%;
+                background-position: center;
+
+            }
+
+            &_card2 {
+                margin-top:2%;
+                height: 240px;
+                width: 98%;
+                padding: 1%;
+                background-position: center;
+                background-size: cover;
+            }
+
+            &_card3 {
+                margin-top:2%;
+                height: 240px;
+                width: 98%;
+                padding: 1%;
+                background-position: center;
+            }
+        }
+    }
+}

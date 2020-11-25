@@ -1,0 +1,114 @@
+footer {
+    margin-top: 100px;
+    height: 240px;
+    width: 100%;
+
+    hr {
+        background: #ff4e50;
+        height: 2px;
+    }
+
+    .footer_info {
+        margin-top: 38px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 15%;
+
+        &_logo {
+            @include text(Montserrat, normal, normal, 16px, 20px, unset, #ff4e50);
+        }
+
+        &_company {
+            p {
+                margin-bottom: 10px;
+                @include text(Montserrat, normal, bold, 14px, 17px, unset, #444444);
+            }
+            ul {
+                list-style-type: none;
+                a {
+                    @include text(Roboto, normal, 300, 14px, 26px, left, #999999);
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &_partners {
+            @include text(Montserrat, normal, bold, 14px, 17px, unset, #444444);
+        }
+
+        &_designedby {
+            width: 122px;
+            height: 53px;
+            background-image: url(../image/designed.png);
+            background-size: cover;
+        }
+    }
+}
+@media screen and (max-width: 969px) {
+    footer {
+        margin-top: 70px;
+        height: 220px;
+        width: 100%;
+        .footer_info {
+            margin-top: 20px;
+            padding: 0% 5%;
+        }
+    }
+};
+
+@media screen and (max-width: 767px){
+    footer {
+        margin-top: 50px;
+        hr {
+            background: #ff4e50;
+            height: 2px;
+        }
+        .footer_info {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0% 2%;
+    
+            &_logo {
+                @include text(Montserrat, normal, normal, 16px, 20px, unset, #ff4e50);
+            }
+    
+            &_company {
+                p {
+                    margin-bottom: 10px;
+                    @include text(Montserrat, normal, bold, 14px, 17px, center, #444444);
+                }
+                ul {
+                    margin: 0% 15%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    list-style-type: none;
+                    text-align: center;
+                    li{margin-left: 5%;}
+                    a {
+                        @include text(Roboto, normal, 300, 14px, 26px, center, #999999);
+                        text-decoration: none;
+                    }
+                }
+            }
+    
+            &_partners {
+                @include text(Montserrat, normal, bold, 14px, 17px, unset, #444444);
+            }
+    
+            &_designedby {
+                width: 122px;
+                height: 53px;
+                background-image: url(/image/designed.png);
+                background-size: cover;
+            }
+        }
+    }
+
+
+
+};

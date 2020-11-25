@@ -1,0 +1,111 @@
+@mixin flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-colum-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+@mixin flex-btwn-colum-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+@mixin flex-btwn-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin button-fonts {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $buttonFontSize;
+    line-height: 17px;
+    color: white;
+}
+
+@mixin header-name {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $mainNameFontSize;
+    line-height: 63px;
+    text-align: center;
+    color: #ffffff;
+}
+
+@mixin text($font-family, $font-style, $font-weight, $font-size, $line-height,$text-align: center,$color: #ffffff) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: $text-align;
+    color: $color;
+}
+
+@mixin button($width, $height, $border, $bg,$color:white) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width;
+    height: $height;
+    border: $border;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background: $bg;
+    @include button-fonts;
+    cursor: pointer;
+    color:$color ;
+}
+
+button:focus {
+    outline: none;
+}
+
+@mixin text-gradient($bg) {
+    background: $bg;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin card($img_url){
+    
+        height: 400px;
+        width: 30%;
+        padding-top: 219px;
+        background-image:$img_url;
+        background-size: cover;
+        &_text {
+            width: 90%;
+            margin: 0 auto;
+            &_step {
+                @include text(Montserrat, normal, normal, $cardFontStepSize, 12px);
+                height: 20px;
+                width: 70px;
+                @include flex-center-center;
+                background: #ff4e50;
+                border-radius: 40px;
+            }
+            &_name {
+                @include text(Montserrat, normal, bold, $cardFontNameSize, 26px, left);
+                margin-top: 15px;
+            }
+            &_text {
+                @include text(Roboto, normal, 300, $cardFontTextSizeDesk, 14px, left, #e3e3e3);
+                margin-top: 10px;
+            }
+        }
+    
+    }
